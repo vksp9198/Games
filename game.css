@@ -10,11 +10,17 @@ body {
 
 h1 {
     background-color: black;
-    color: rgb(228, 23, 0);
-    border: 2px solid rgb(228, 23, 0);
+    color: whitesmoke;
+    border: 2px solid black;
     border-radius: 12px;
     height: 5rem;
     line-height: 5rem;
+}
+
+h1:hover {
+    color: aqua;
+    transition: ease-in 3sec;
+    cursor: pointer;
 }
 
 #choices {
@@ -62,19 +68,22 @@ img:hover {
 
 #msg {
     background-color: rgb(10, 9, 9);
-    color: rgb(228, 23, 0);
+    color: whitesmoke;
+    border: 2px solid black;
     height: 3rem;
     line-height: 3rem;
     display: inline;
     padding: 12px 22px;
     font-size: 2rem;
-    border: 2px solid rgb(228, 23, 0);
     border-radius: 12px;
+}
 
+#msg:hover {
+    color: aqua;
+    transition: ease-in 3sec;
+    cursor: pointer;
 }
 
 .msg-board {
     margin-top: 4rem;
-
-
 }
