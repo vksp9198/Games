@@ -12,12 +12,12 @@ const drawGame = () => {
     msg.style.color = "white";
 }
 
-const showWinner = (userWin) => {
+const showWinner = (userWin,userChoice,cmpChoice) => {
     if (userWin) {
         userScore++;
         user.innerText = userScore;
-        msg.innerText = "You win..";
-        // msg.innerText = `You win, Your ${userChoice} beats ${cmpChoice}`;
+       // msg.innerText = "You win..";
+         msg.innerText = `You win, Your choice ${userChoice} beats ${cmpChoice}`;
         msg.style.backgroundColor = "green";
         msg.style.color = "white";
         msg.style.border = "green";
@@ -25,8 +25,8 @@ const showWinner = (userWin) => {
     } else {
         compScore++;
         comp.innerText = compScore;
-        msg.innerText = "You lose!!";
-        // msg.innerText = `You lose!!, Your ${cmpChoice} beats ${userChoice}`;
+       // msg.innerText = "You lose!!";
+        msg.innerText = `You lose!!, computer choise ${cmpChoice} beats ${userChoice}`;
         msg.style.backgroundColor = "red";
         msg.style.color = "white";
     }
@@ -67,7 +67,7 @@ const playGame = (userChoice) => {
             // rock, paper
             userWin = cmpChoice === "rock" ? false : true;
         }
-        showWinner(userWin);
+        showWinner(userWin,userChoice,cmpChoice);
     }
 };
 /*-----------------------*/
